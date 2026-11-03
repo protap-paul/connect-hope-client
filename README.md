@@ -4,7 +4,7 @@ ConnectHope is a community-driven platform that connects people with social deve
 
 ## 🌐 Live Links
 
-- **Frontend:** `YOUR_FRONTEND_LIVE_URL`
+- **Frontend:** https://connect-hope-client-vd76-beryl.vercel.app/
 - **Backend API:** https://connect-hope-server.vercel.app/
 - **GitHub Client:** https://github.com/protap-paul/connect-hope-client
 - **GitHub Server:** https://github.com/protap-paul/connect-hope-server
