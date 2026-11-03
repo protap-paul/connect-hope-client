@@ -2,6 +2,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import {
     ArrowRight,
     HeartHandshake,
@@ -76,7 +77,7 @@ const HeroSection = () => {
                         <Button
                             size="lg"
                             nativeButton={false}
-                            render={<a href="/events" />}
+                            render={<Link href="/events" />}
                         >
                             Explore Events
                             <ArrowRight className="ml-2 h-4 w-4" />

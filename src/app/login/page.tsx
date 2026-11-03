@@ -14,6 +14,8 @@ export default function LoginPage() {
     const [currentYear, setCurrentYear] = useState<number | null>(null);
 
     useEffect(() => {
+        // Client-only value: keeps server-rendered HTML free of a stale year.
+        // eslint-disable-next-line react-hooks/set-state-in-effect
         setCurrentYear(new Date().getFullYear());
     }, []);
 
@@ -37,7 +39,10 @@ export default function LoginPage() {
             });
 
             if (error) {
-                setMessage(error.message);
+                setMessage(
+                    error.message ??
+                        "Login failed. Please check your email and password.",
+                );
                 return;
             }
 
@@ -62,7 +67,7 @@ export default function LoginPage() {
             });
 
             if (error) {
-                setMessage(error.message);
+                setMessage(error.message ?? "Google login failed. Please try again.");
                 setGoogleLoading(false);
             }
         } catch {

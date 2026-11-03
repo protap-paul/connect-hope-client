@@ -81,6 +81,7 @@ export default function ManageEventsList() {
     }, []);
 
     useEffect(() => {
+        // eslint-disable-next-line react-hooks/set-state-in-effect
         setCurrentTime(Date.now());
     }, []);
 

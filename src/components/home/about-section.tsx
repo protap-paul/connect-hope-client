@@ -122,7 +122,7 @@ export default function AboutSection() {
 
                     {/* Feature Cards */}
                     <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
-                        {features.map((feature, index) => {
+                        {features.map((feature) => {
                             const Icon = feature.icon;
 
                             return (

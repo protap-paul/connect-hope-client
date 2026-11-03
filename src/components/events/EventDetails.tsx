@@ -435,7 +435,7 @@ export default function EventDetails({ id }: EventDetailsProps) {
                             <DialogTitle>Leave This Event?</DialogTitle>
 
                             <DialogDescription>
-                                Are you sure you want to leave "{event.title}"?
+                                Are you sure you want to leave &quot;{event.title}&quot;?
                                 You can join again later if registration is still available.
                             </DialogDescription>
                         </DialogHeader>

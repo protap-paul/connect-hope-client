@@ -82,12 +82,10 @@ export default function ProfilePage() {
 
         if (!isPending && session?.user) {
             fetchProfile();
-        } else if (!isPending && !session?.user) {
-            setLoading(false);
         }
     }, [isPending, session]);
 
-    if (isPending || loading) {
+    if (isPending || (session?.user && loading)) {
         return (
             <div className="flex min-h-[60vh] items-center justify-center">
                 <Loader2 className="h-8 w-8 animate-spin" />

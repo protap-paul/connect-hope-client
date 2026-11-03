@@ -8,7 +8,6 @@ import { useState } from "react";
 
 import {
     CalendarDays,
-    HeartHandshake,
     ImagePlus,
     MapPin,
 } from "lucide-react";
@@ -90,7 +89,7 @@ export default function CreateEventForm() {
         defaultValues: {
             title: "",
             description: "",
-            eventType: "",
+            eventType: undefined,
             thumbnail: "",
             location: "",
             eventDate: "",

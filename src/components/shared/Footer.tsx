@@ -1,7 +1,6 @@
 
 "use client";
 
-import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { HeartHandshake, Mail, Globe } from "lucide-react";
 

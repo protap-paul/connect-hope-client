@@ -75,7 +75,9 @@ export default function RegisterPage() {
             });
 
             if (error) {
-                toast.error(error.message);
+                toast.error(
+                    error.message ?? "Registration failed. Please try again.",
+                );
                 return;
             }
 
@@ -102,7 +104,9 @@ export default function RegisterPage() {
             });
 
             if (error) {
-                toast.error(error.message);
+                toast.error(
+                    error.message ?? "Google registration failed. Please try again.",
+                );
                 setGoogleLoading(false);
             }
         } catch {

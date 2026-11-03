@@ -78,6 +78,8 @@ export default function DashboardPage() {
     const [currentTime, setCurrentTime] = useState<number | null>(null);
 
     useEffect(() => {
+        // Client-only time so past/upcoming status never differs during hydration.
+        // eslint-disable-next-line react-hooks/set-state-in-effect
         setCurrentTime(Date.now());
     }, []);
 
@@ -388,7 +390,7 @@ export default function DashboardPage() {
                                             className="flex items-center gap-3 rounded-lg border p-3"
                                         >
                                             <Image
-                                                src={event.thumbnail || "/placeholder-event.jpg"}
+                                                src={event.thumbnail || "/placeholder-event.svg"}
                                                 alt={event.title}
                                                 width={64}
                                                 height={64}
@@ -455,7 +457,7 @@ export default function DashboardPage() {
                                             className="flex items-center gap-3 rounded-lg border p-3"
                                         >
                                             <Image
-                                                src={event.thumbnail || "/placeholder-event.jpg"}
+                                                src={event.thumbnail || "/placeholder-event.svg"}
                                                 alt={event.title}
                                                 width={64}
                                                 height={64}

@@ -37,6 +37,7 @@ export default function JoinedEventsList() {
 
     // Get current time after component mounts
     useEffect(() => {
+        // eslint-disable-next-line react-hooks/set-state-in-effect
         setCurrentTime(Date.now());
     }, []);
 
