@@ -1,36 +1,142 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# ConnectHope — Social Development Events Platform
 
-## Getting Started
+ConnectHope is a community-driven platform that connects people with social development activities. Users can discover upcoming events, join community initiatives, and contribute to making a positive impact.
 
-First, run the development server:
+## 🌐 Live Links
+
+- **Frontend:** `YOUR_FRONTEND_LIVE_URL`
+- **Backend API:** https://connect-hope-server.vercel.app/
+- **GitHub Client:** https://github.com/protap-paul/connect-hope-client
+- **GitHub Server:** https://github.com/protap-paul/connect-hope-server
+
+## ✨ Key Features
+
+1. **User Authentication:** Secure registration and login using Better Auth.
+2. **Upcoming Events:** Browse upcoming social development events.
+3. **Event Details:** View detailed information about individual events.
+4. **Join Events:** Authenticated users can join community events.
+5. **Create Events:** Logged-in users can create new social events.
+6. **Manage Events:** Event creators can update or delete their own events.
+7. **Joined Events:** Users can view and manage events they have joined.
+8. **User Profile:** View and update personal profile information.
+9. **Responsive Design:** Accessible across desktop, tablet, and mobile devices.
+10. **Theme Support:** Light and dark mode support.
+
+## 🛠️ Technologies Used
+
+### Frontend
+
+- Next.js
+- React
+- TypeScript
+- Tailwind CSS
+- shadcn/ui
+- Better Auth
+
+### Backend
+
+- Node.js
+- Express.js
+- MongoDB
+- JWT Authentication
+- JOSE
+
+## 📦 Installation and Setup
+
+### 1. Clone the Frontend Repository
+
+```bash
+git clone https://github.com/protap-paul/connect-hope-client.git
+cd connect-hope-client
+```
+
+### 2. Install Dependencies
+
+```bash
+npm install
+```
+
+### 3. Configure Environment Variables
+
+Create a `.env.local` file in the frontend root directory:
+
+```env
+NEXT_PUBLIC_API_URL=https://connect-hope-server.vercel.app
+```
+
+### 4. Run the Frontend
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open http://localhost:3000 in your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## ⚙️ Backend Setup
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### 1. Clone the Backend Repository
 
-## Learn More
+```bash
+git clone https://github.com/protap-paul/connect-hope-server.git
+cd connect-hope-server
+```
 
-To learn more about Next.js, take a look at the following resources:
+### 2. Install Dependencies
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+npm install
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### 3. Configure Environment Variables
 
-## Deploy on Vercel
+Create a `.env` file in the backend root directory and configure:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```env
+PORT=5000
+MONGODB_URI=your_mongodb_connection_string
+DB_NAME=connectHope
+AUTH_BASE_URL=your_better_auth_base_url
+CLIENT_URL=your_frontend_url
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Use your actual MongoDB connection string and deployment URLs.
+
+### 4. Run the Backend
+
+```bash
+npm run dev
+```
+
+The backend server will run at http://localhost:5000.
+
+## 🔐 Authentication
+
+ConnectHope uses Better Auth for user authentication and JWT-based authorization for protecting backend API endpoints.
+
+Protected operations require a valid authentication token.
+
+## 📁 Project Structure
+
+```text
+connect-hope-client/
+├── public/
+├── src/
+│   ├── app/
+│   ├── components/
+│   ├── lib/
+│   └── types/
+├── .env.local
+└── package.json
+```
+
+## 🎯 Project Purpose
+
+ConnectHope aims to encourage community participation in social development activities by making it easier for people to discover, organize, and join meaningful events.
+
+## 👨‍💻 Developer
+
+**Protap Paul**
+
+Full Stack Developer
+
+GitHub: https://github.com/protap-paul
